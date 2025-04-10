@@ -9,20 +9,24 @@ import { assets } from '../../assets/assets.js';
 const Order = ({ url }) => {
   const [Orders, setOrders] = useState([]);
 
-  const fetchAllOrders = async () => {
+  const fetchAllOrders = async (retryCount = 0) => {
     try {
       const response = await axios.get(`${url}/api/order/list`);
       if (response.data.success) {
         setOrders(response.data.data);
-        console.log(response.data.data);
       } else {
         toast.error("Failed to fetch orders.");
       }
     } catch (error) {
-      console.error("Error fetching orders:", error?.response?.data || error.message);
-      toast.error("Error fetching orders. Please try again.");
+      if (retryCount < 3) {
+        setTimeout(() => fetchAllOrders(retryCount + 1), 2000); // Retry after 2s
+      } else {
+        console.error("Error fetching orders:", error?.response?.data || error.message);
+        toast.error("Error fetching orders. Please try again later.");
+      }
     }
   };
+  
   
   const statusHandler = async (event, orderId) => {
     try {
