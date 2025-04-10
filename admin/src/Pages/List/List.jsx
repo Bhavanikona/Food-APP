@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import '../List/List.css';
 
 const List = ({ url }) => {
   const [list, setList] = useState([]);
