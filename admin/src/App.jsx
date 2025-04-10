@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
   
 
 const App = () => {
-  const url="http://127.0.0.1:5000";
+  const url="https://food-app-admin-ytp0.onrender.com";
   return (
     <div>
       <ToastContainer/>
