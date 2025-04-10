@@ -5,7 +5,7 @@ import { assets } from "../../assets/assets";
 import { storeContext } from "../../Context/StoreContext";
 
 const Navbar = ({ setLogin }) => {
-  const [menu, setmenu] = useState("Menu");
+  const [menu, setmenu] = useState("Home");
   const {getTotalamount,token,setToken} =useContext(storeContext);
   const navigate=useNavigate()
   const logOut=()=>{
