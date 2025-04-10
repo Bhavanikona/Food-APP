@@ -1,4 +1,4 @@
-import foodModel from "../modals/FoodModal.js";
+import foodModel from "../models/FoodModal.js";
 import fs from "fs";
 
 
