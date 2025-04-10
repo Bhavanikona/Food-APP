@@ -1,0 +1,16 @@
+.navbar{
+    padding: 10px;
+}
+.navbar .logo{
+    width: max(10%,80px);
+    color: tomato;
+  margin-left: 40px;
+
+}
+.navbar p{
+    margin-left: 45px;
+
+}
+.navbar .profile{
+    width: 40px;
+}
