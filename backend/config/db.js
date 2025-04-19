@@ -7,7 +7,7 @@ import mongoose from 'mongoose';
 
 export const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/foodDB'
+    await mongoose.connect('mongodb://localhost:27017/food-app'
       
     );
     console.log("MongoDB connected successfully");
