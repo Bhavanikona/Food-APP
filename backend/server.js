@@ -13,7 +13,11 @@ const port = process.env.PORT || 5000;
 
 // Middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:5173", "https://food-app-frontend-dxgb.onrender.com"],
+  credentials: true,
+}));
+app.options("*", cors()); 
 
 // Connect to the database
 connectDB();

@@ -21,7 +21,7 @@ const addFood=async (req,res)=> {
         res.json({success:false,message:"Error"})
     }    
 }
-//all food list
+// all food list
 const listFood = async (req,res)=>{
     try{
         const foods=await foodModel.find({});
@@ -31,7 +31,9 @@ const listFood = async (req,res)=>{
         res.json({success:false,message:"Error"});
     }
 }
-
+r
+ 
+  
 //remove food item
 const removeFood =async(req,res)=>{
  try{
