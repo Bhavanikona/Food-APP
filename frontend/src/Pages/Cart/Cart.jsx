@@ -24,9 +24,8 @@ const Cart = () => {
         {food_list.map((item, index) => {
           if (cartItem[item._id] > 0) {
             return (
-              <div>
+              <div  key={item._id}>
                 <div
-                  key={item._id}
                   className="cart-items-title cart-items-item"
                 >
                   <p>
