@@ -14,7 +14,7 @@ const port = process.env.PORT || 5000;
 // Middlewares
 app.use(express.json());
 app.use(cors({
-  origin: ["http://localhost:5173", "https://food-app-frontend-dxgb.onrender.com"],
+  origin: ["http://localhost:5173", "http://localhost:5174","https://food-app-admin-ytp0.onrender.com", "https://food-app-frontend-dxgb.onrender.com"],
   credentials: true,
 }));
 app.options("*", cors()); 
